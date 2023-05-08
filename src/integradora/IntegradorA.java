@@ -6,6 +6,7 @@
 package integradora;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -76,15 +77,23 @@ public class IntegradorA {
                     ExtrasG1.contarDigitos();
                     break;
                 case "12":
-                    ExtrasG1.publicidad();
+                    //ExtrasG1.publicidad();
+                    ExtrasG1.Ej12();
                     break;
                 case "13":
                     ExtrasG1.escaleraDeNumeros();
+                case "s": case "S":
+                    break;
+                default:
+                    JOptionPane.showMessageDialog(null,"No existe esa Opcion, elija otra");
+                    System.out.println("No Existe esa Opcion, elija otra");
+                    break;
             }
-        }while (!"S".equals(vResp));
+            // !"S".toUpperCase().equals(vResp)
+        }while (!vResp.toUpperCase().equals("S"));
         System.out.println("Gracias por usar nuestros sistemas!!! - vuelva pronto");
-    }
-    
+    } 
+   
     
     
     

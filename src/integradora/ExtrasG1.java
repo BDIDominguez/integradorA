@@ -6,6 +6,7 @@
 package integradora;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -23,6 +24,7 @@ equivalente: 1 día, 2 horas. */
         horas = minutos / 60;
         minutos = minutos - (horas * 60);
         System.out.println("Serian " + dias + " Dias, con " + horas + " horas y " + minutos + " minutos.");
+        JOptionPane.showMessageDialog(null,"Serian " + dias + " Dias, con " + horas + " horas y " + minutos + " minutos.");
     }
     
     /* 2. Crear un método dentro del cual tendrá cuatro variables de tipo entero A, B, C y D y asignarle
@@ -391,6 +393,19 @@ Ejemplo: si se ingresa el número 3:
         }
     }
     
-    
+    public static void Ej12(){
+        
+            for(int i = 0; i<1000; i++){
+                
+                String numeros = String.format("%03d", i);
+                
+                numeros = numeros.replace("3", "E");
+                
+                String formato = numeros.charAt(0)+"-"+numeros.charAt(1)+"-"+numeros.charAt(2);
+                
+                System.out.println(formato);
+                
+            }
+    }
     
 } // fin del metodo
